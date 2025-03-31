@@ -1,31 +1,3 @@
-"""
-main.py
-
-Description:
--------------
-This is the core entry point for the web scraper UI built with Streamlit.
-It imports scraping functions from scrape.py and the parsing function from parse.py.
-The file implements the UI that allows the user to:
-  - Provide a URL to scrape
-  - View the scraped and cleaned DOM (HTML) content
-  - Provide a parsing description for how to extract specific data
-  - Display parsed content using a language model (via parse.py)
-
-How It Works:
--------------
-1. The user inputs a URL.
-2. When "Scrape" is clicked, the code calls scrape_website (from scrape.py) to launch a browser,
-   fetch the webpage HTML, then cleans it and stores it in the session state.
-3. The cleaned DOM is shown in an expandable text area.
-4. The user enters a parse description and clicks "Parse Content". Then, the text is split into
-   manageable chunks and passed to the language model via parse_with_ollama (from parse.py).
-5. The parsed results are then displayed.
-
-Dependencies:
-  - scrape.py : Handles web scraping and cleaning of HTML content.
-  - parse.py  : Handles calling the language model to parse the DOM content.
-"""
-
 import streamlit as st
 
 # Import scraping-related functions from scrape.py
