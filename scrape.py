@@ -1,27 +1,3 @@
-"""
-scrape.py
-
-Description:
--------------
-This module is responsible for fetching the HTML content of a webpage using Selenium.
-It provides functions to:
-  - Fetch webpage HTML with a Chrome browser instance.
-  - Extract only the <body> portion of the HTML.
-  - Clean the extracted HTML by removing scripts and styles.
-  - Split the cleaned HTML content into smaller chunks for further processing.
-
-How It Works:
--------------
-1. scrape_website(website): Uses Selenium to open a Chrome browser, navigate to the URL, and retrieve the HTML.
-2. extract_body_content(html): Uses BeautifulSoup to extract the <body> tag from the given HTML.
-3. clean_body_content(body_content): Removes unwanted elements (scripts, styles) from the HTML.
-4. split_dom_content(dom_content, max_length): Splits the content into chunks (default size of 1000 characters).
-  
-Connection:
--------------
-- main.py imports functions from this file to perform the scraping step before parsing.
-"""
-
 import streamlit as st
 import selenium.webdriver as webdriver
 from selenium.webdriver.chrome.service import Service
